@@ -1,6 +1,6 @@
 # building-spring-boot-rest-api
 
-Building a Spring Boot Rest API For Pia/Vodafone
+Building a Spring Boot Rest API
 
 Tutorial 
 
