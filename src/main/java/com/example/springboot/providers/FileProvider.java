@@ -96,10 +96,6 @@ public class FileProvider {
         return fileDao.findAll();
     }
 
-    public File findOne(Long id) {
-        return fileDao.findOne(id);
-    }
-
     public ResponseEntity<Object> destroy(Long id) {
         fileDao.delete(id);
         return new ResponseEntity<>(null, HttpStatus.ACCEPTED);
