@@ -9,7 +9,6 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import static com.google.common.base.Predicates.or;
 import static springfox.documentation.builders.PathSelectors.regex;
 
 @Configuration
@@ -23,12 +22,12 @@ public class SwaggerConfig {
     }
 
     private Predicate<String> postPaths() {
-        return or(regex("/api/files.*"), regex("/api/files.*"));
+        return regex("/image/*");
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("Files API")
-                .description("File Download/Upload API reference for developers")
+        return new ApiInfoBuilder().title("Image API")
+                .description("AWS Image Download/Upload API reference for developers")
                 .termsOfServiceUrl("http://github.com/osakturk")
                 .contact("omerakturk@outlook.com.tr").license("Osakturk License")
                 .licenseUrl("omerakturk@outlook.com.tr").version("1.0").build();
