@@ -57,7 +57,6 @@ public class ImageController {
     public ResponseEntity<Object> updateFile(@PathVariable String predefinedTypeName, @PathVariable(required = false) String dummySeoName, @RequestParam String reference) {
         serviceProvider.flushFile(predefinedTypeName, reference);
         return new ResponseEntity<>(null, HttpStatus.ACCEPTED);
-
     }
 
     @DeleteMapping("/flush/predefinedTypeName/dummySeoName/")
